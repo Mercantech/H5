@@ -16,7 +16,7 @@ Information om Embeded findes på [Notion](https://mercantec.notion.site/h5-embe
 
 ## 4. Message Broker med RabbitMQ
 
-Information om Message brokers og specielt om RabbitMQ findes på [Notion](https://mercantec.notion.site/h5-message-broker) - Filerne er placeret i [RabbitMQ](rabbitMQ/)
+Information om Message brokers og specielt om RabbitMQ findes på [Notion](https://mercantec.notion.site/h5-message-broker) - Filerne er placeret i [MessageBroker](MessageBroker/)
 
 ## 5. Database og databehandling
 
