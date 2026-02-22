@@ -1,57 +1,42 @@
 {
   "main": {
-    "id": "e38cd14ee4db3bf1",
+    "id": "f4cdeebb82203792",
     "type": "split",
     "children": [
       {
-        "id": "0186e6f2bfd7e10b",
+        "id": "c5aa6c0ef4e1f842",
         "type": "tabs",
         "children": [
           {
-            "id": "924275239a8c8099",
+            "id": "c5e551fa82615f4f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "H5-Noter/Welcome.md",
+                "file": "Noter/Fællesnoter/Velkommen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome"
+              "title": "Velkommen"
             }
           }
-        ]
-      },
-      {
-        "id": "992164f2b7e56acc",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a6fc923c8a5307f3",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
+        ],
+        "currentTab": 0
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "1dd8b2d8bf15487a",
+    "id": "288db7a72ceae366",
     "type": "split",
     "children": [
       {
-        "id": "895f502095d2c957",
+        "id": "c872ef7b16408b82",
         "type": "tabs",
         "children": [
           {
-            "id": "cb6ca1733ae66b1a",
+            "id": "426837ab909bc068",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -64,7 +49,7 @@
             }
           },
           {
-            "id": "96ee97a209a38cda",
+            "id": "f7439f0cb836330b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -81,36 +66,36 @@
             }
           },
           {
-            "id": "3ae6c231a0c44707",
+            "id": "f68ff0665850dff2",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
-            }
+              "state": {}
+            },
+            "icon": "lucide-bookmark",
+            "title": "Bookmarks"
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
-    "id": "37f9cf0e0514da81",
+    "id": "ce03787a61c41e5b",
     "type": "split",
     "children": [
       {
-        "id": "84c33a2a8b4619f8",
+        "id": "f3a04c8dceb7dfd1",
         "type": "tabs",
         "children": [
           {
-            "id": "c5d2754672ecbd3a",
+            "id": "0accf8b46e5a5bb0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "Noter/Fællesnoter/Velkommen.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,25 +105,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Welcome"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "22cad92a1662b30a",
+            "id": "da680618e6ee59bb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "Noter/Fællesnoter/Velkommen.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "88ee4f72a1a5f2ef",
+            "id": "b5b38c67b40e2a34",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -153,32 +138,18 @@
             }
           },
           {
-            "id": "5287d1570831b165",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "All properties"
-            }
-          },
-          {
-            "id": "bcdd12ad75035db5",
+            "id": "0277b2aed2d4fafc",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "Noter/Fællesnoter/Velkommen.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Welcome"
+              "title": "Outline"
             }
           }
         ]
@@ -196,21 +167,10 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "924275239a8c8099",
-  "lastOpenFiles": [
-    "New/ProjektBeskrivelse.md",
-    "MessageBroker/messageBroker.md",
-    "projektBeskrivelse/projekt.md",
-    "linux/linux.md",
-    "dashboard/dashboard.md",
-    "databehandling/databehandling.md",
-    "ekstraEmner/Docker/Docker.md",
-    "ekstraEmner/MicroServices/MicroServices.md",
-    "ekstraEmner/EkstraEmner.md",
-    "embedded/embedded.md",
-    "Welcome.md"
-  ]
+  "active": "c5e551fa82615f4f",
+  "lastOpenFiles": ["Noter/Fællesnoter/Velkommen.md"]
 }
