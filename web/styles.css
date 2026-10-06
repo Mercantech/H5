@@ -1,0 +1,68 @@
+:root {
+  --ink: #122018;
+  --paper: #eef6f1;
+  --accent: #1f7a4d;
+  --muted: #3d5648;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(31, 122, 77, 0.2), transparent 55%),
+    linear-gradient(160deg, #f3faf6, #e2efe8);
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+main {
+  max-width: 36rem;
+}
+
+.org {
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(3rem, 10vw, 5rem);
+  letter-spacing: -0.04em;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+
+code {
+  font-family: ui-monospace, monospace;
+  background: rgba(31, 122, 77, 0.12);
+  padding: 0.1em 0.35em;
+}

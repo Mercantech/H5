@@ -1,0 +1,14 @@
+# Lokal: docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
+services:
+  web:
+    ports:
+      - "${LOCAL_WEB_PORT:-3085}:3000"
+  rabbitmq:
+    ports:
+      - "${LOCAL_RABBITMQ_PORT:-5672}:5672"
+      - "${LOCAL_RABBITMQ_UI_PORT:-15672}:15672"
+
+networks:
+  dokploy-network:
+    external: false
+    name: h5-local

@@ -1,0 +1,63 @@
+# Dokploy: docker compose up -d --build
+#
+# Host(`h5.mercantec.tech`) → web:3000
+# Host(`h5-rabbit.mercantec.tech`) → rabbitmq management:15672 (valgfri)
+#
+# Ekstra services (RabbitMQ) er en del af H5-forløbet — web er stadig det
+# primære offentlige entrypoint.
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    networks:
+      - dokploy-network
+      - internal
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=dokploy-network
+      - traefik.http.routers.h5-web.rule=Host(`${APP_DOMAIN:-h5.mercantec.tech}`)
+      - traefik.http.routers.h5-web.entrypoints=web
+      - traefik.http.routers.h5-web.service=h5-web
+      - traefik.http.services.h5-web.loadbalancer.server.port=3000
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-h5}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-h5secret}
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    networks:
+      - internal
+      - dokploy-network
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=dokploy-network
+      - traefik.http.routers.h5-rabbit.rule=Host(`${RABBITMQ_UI_DOMAIN:-h5-rabbit.mercantec.tech}`)
+      - traefik.http.routers.h5-rabbit.entrypoints=web
+      - traefik.http.routers.h5-rabbit.service=h5-rabbit
+      - traefik.http.services.h5-rabbit.loadbalancer.server.port=15672
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+networks:
+  dokploy-network:
+    external: true
+  internal:
+    driver: bridge
+
+volumes:
+  rabbitmq-data:

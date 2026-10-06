@@ -1,5 +1,21 @@
 # H5 - Template
-Repository til H5 forløb ved MAGS - for komplet overblik over H5 med MAGS kan man se på følgende side - [H5](https://mercantec.notion.site/h5?pvs=4) 
+Repository til H5 forløb ved MAGS - for komplet overblik over H5 med MAGS kan man se på følgende side - [H5](https://mercantec.notion.site/h5?pvs=4)
+
+| | |
+|---|---|
+| **Live** | https://h5.mercantec.tech |
+| **RabbitMQ UI** | https://h5-rabbit.mercantec.tech |
+| **Oversigt** | https://h.mercantec.tech |
+
+## Hosting
+
+```bash
+cp .env.example .env
+docker compose up -d --build
+```
+
+Lokalt: `docker compose -f docker-compose.yml -f docker-compose.local.yml up --build`  
+Stacken har fælles `web`-entrypoint plus **RabbitMQ** (management UI) som H5-ekstra. 
 
 ## 1. Projekt Beskrivelse
 
