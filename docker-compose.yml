@@ -1,14 +1,11 @@
 # Dokploy: docker compose up -d --build
-# Host(`h5.mercantec.tech`) → web:3000
-# Host(`h5-rabbit.mercantec.tech`) → RabbitMQ management (valgfri ekstra)
+# Ingen host-ports. Kun Traefik via labels.
 services:
   web:
     build:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
-    networks:
-      - dokploy-network
     labels:
       - traefik.enable=true
       - traefik.docker.network=dokploy-network
@@ -31,8 +28,6 @@ services:
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-h5secret}
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
-    networks:
-      - dokploy-network
     labels:
       - traefik.enable=true
       - traefik.docker.network=dokploy-network
@@ -48,7 +43,8 @@ services:
       start_period: 30s
 
 networks:
-  dokploy-network:
+  default:
+    name: dokploy-network
     external: true
 
 volumes:

@@ -9,6 +9,6 @@ services:
       - "${LOCAL_RABBITMQ_UI_PORT:-15672}:15672"
 
 networks:
-  dokploy-network:
-    external: false
+  default:
     name: h5-local
+    external: false
