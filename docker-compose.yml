@@ -1,10 +1,6 @@
 # Dokploy: docker compose up -d --build
-#
 # Host(`h5.mercantec.tech`) → web:3000
-# Host(`h5-rabbit.mercantec.tech`) → rabbitmq management:15672 (valgfri)
-#
-# Ekstra services (RabbitMQ) er en del af H5-forløbet — web er stadig det
-# primære offentlige entrypoint.
+# Host(`h5-rabbit.mercantec.tech`) → RabbitMQ management (valgfri ekstra)
 services:
   web:
     build:
@@ -13,7 +9,6 @@ services:
     restart: unless-stopped
     networks:
       - dokploy-network
-      - internal
     labels:
       - traefik.enable=true
       - traefik.docker.network=dokploy-network
@@ -37,7 +32,6 @@ services:
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
     networks:
-      - internal
       - dokploy-network
     labels:
       - traefik.enable=true
@@ -56,8 +50,6 @@ services:
 networks:
   dokploy-network:
     external: true
-  internal:
-    driver: bridge
 
 volumes:
   rabbitmq-data:
