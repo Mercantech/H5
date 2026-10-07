@@ -310,11 +310,120 @@ main {
   font-size: 1.05rem;
 }
 
+.phases,
 .story,
 .stack,
 .promise {
   padding: 3.25rem 0 1rem;
   border-top: 1px solid var(--line);
+}
+
+#to-forlob,
+#faste-emner,
+#minisvendeproeve {
+  scroll-margin-top: 5rem;
+}
+
+.phase-track {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.phase {
+  padding: 1.5rem 1.4rem 1.55rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  animation: rise 0.7s ease both;
+}
+
+.phase-accent {
+  background:
+    linear-gradient(145deg, rgba(16, 40, 32, 0.96), rgba(12, 28, 23, 0.98));
+  border-color: transparent;
+  color: #e7f3ec;
+  box-shadow: var(--shadow);
+}
+
+.phase-index {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+
+.phase-accent .phase-index {
+  color: var(--lime);
+}
+
+.phase-weeks {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  color: var(--ink);
+}
+
+.phase-accent .phase-weeks {
+  color: #fff;
+}
+
+.phase h3 {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.phase p:not(.phase-index):not(.phase-weeks) {
+  margin: 0 0 1.1rem;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  max-width: 34ch;
+}
+
+.phase-accent p:not(.phase-index):not(.phase-weeks) {
+  color: rgba(231, 243, 236, 0.75);
+}
+
+.phase-link {
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: var(--moss-deep);
+  text-decoration: none;
+  border-bottom: 2px solid var(--lime);
+}
+
+.phase-link:hover {
+  color: var(--ink);
+}
+
+.phase-accent .phase-link {
+  color: var(--lime);
+  border-bottom-color: rgba(198, 245, 106, 0.45);
+}
+
+.phase-accent .phase-link:hover {
+  color: #fff;
+}
+
+.phase-bridge {
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--moss);
+  opacity: 0.55;
 }
 
 .chapters {
@@ -590,6 +699,15 @@ main {
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+  .phase-track {
+    grid-template-columns: 1fr;
+  }
+
+  .phase-bridge {
+    transform: rotate(90deg);
+    padding: 0.2rem 0;
   }
 
   .chapters {
