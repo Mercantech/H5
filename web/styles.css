@@ -246,13 +246,33 @@ main {
 
 .hero-stage {
   animation: rise 0.85s 0.1s ease both;
+  position: relative;
+}
+
+.pipeline {
+  position: relative;
+  border-radius: 36px;
+}
+
+.pipeline::before {
+  content: "";
+  position: absolute;
+  inset: 8% 6% auto;
+  height: 70%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(198, 245, 106, 0.22), transparent 68%);
+  filter: blur(18px);
+  pointer-events: none;
+  animation: glow-breathe 4.5s ease-in-out infinite;
 }
 
 .hero-art {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 28px 50px rgba(12, 28, 23, 0.2));
+  filter: drop-shadow(0 28px 50px rgba(12, 28, 23, 0.28));
+  position: relative;
+  z-index: 1;
 }
 
 .hero-caption {
@@ -264,19 +284,81 @@ main {
   letter-spacing: 0.02em;
 }
 
-.pulse {
-  animation: pulse 2.8s ease-in-out infinite;
-  transform-origin: 96px 210px;
+.ambient-orb {
+  animation: orb-drift 7s ease-in-out infinite;
+  transform-origin: center;
 }
 
-.signal {
-  stroke-dasharray: 140;
-  stroke-dashoffset: 140;
-  animation: draw 2.4s ease forwards infinite;
+.ambient-orb-b {
+  animation-delay: -3s;
+  animation-direction: reverse;
 }
 
-.signal-delay {
-  animation-delay: 0.35s;
+.core-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: core-throb 1.8s ease-in-out infinite;
+}
+
+.ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ring-expand 2.6s ease-out infinite;
+}
+
+.ring-b {
+  animation-delay: 0.9s;
+}
+
+.signal-flow {
+  stroke-dasharray: 18 14;
+  animation: dash-move 1.4s linear infinite;
+}
+
+.signal-flow-2 {
+  animation-delay: 0.25s;
+}
+
+.signal-flow-3 {
+  animation-delay: 0.5s;
+}
+
+.packet {
+  opacity: 0.95;
+}
+
+.led {
+  animation: led-blink 1.6s ease-in-out infinite;
+}
+
+.led-2 {
+  animation-delay: 0.25s;
+}
+
+.led-3 {
+  animation-delay: 0.5s;
+}
+
+.bar {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  animation: bar-bounce 2.2s ease-in-out infinite;
+}
+
+.bar-2 {
+  animation-delay: 0.15s;
+}
+
+.bar-3 {
+  animation-delay: 0.3s;
+}
+
+.bar-4 {
+  animation-delay: 0.45s;
+}
+
+.status-dot {
+  animation: led-blink 1.2s ease-in-out infinite;
 }
 
 .section-head {
@@ -679,28 +761,80 @@ main {
   }
 }
 
-@keyframes pulse {
+@keyframes glow-breathe {
   0%,
   100% {
-    opacity: 0.7;
+    opacity: 0.55;
+    transform: scale(0.96);
   }
   50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes orb-drift {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translate(10px, -8px) scale(1.08);
+  }
+}
+
+@keyframes core-throb {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes ring-expand {
+  0% {
+    transform: scale(0.72);
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+@keyframes dash-move {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes led-blink {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  40%,
+  60% {
     opacity: 1;
   }
 }
 
-@keyframes draw {
-  0% {
-    stroke-dashoffset: 140;
-    opacity: 0.3;
-  }
-  40% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
+@keyframes bar-bounce {
+  0%,
   100% {
-    stroke-dashoffset: -140;
-    opacity: 0.3;
+    transform: scaleY(0.72);
+  }
+  50% {
+    transform: scaleY(1);
   }
 }
 
@@ -761,17 +895,31 @@ main {
   }
 
   .atmosphere::before,
-  .pulse,
-  .signal,
+  .pipeline::before,
+  .ambient-orb,
+  .core-pulse,
+  .ring,
+  .signal-flow,
+  .led,
+  .bar,
+  .status-dot,
   .hero-copy,
   .hero-stage,
   .chapter {
     animation: none !important;
   }
 
-  .signal {
-    stroke-dashoffset: 0;
-    opacity: 1;
+  .packet animateMotion {
+    display: none;
+  }
+
+  .signal-flow {
+    stroke-dasharray: none;
+    opacity: 0.7;
+  }
+
+  .bar {
+    transform: none;
   }
 
   .cta:hover,
