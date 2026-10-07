@@ -3,35 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>H5 · MAGS</title>
+    <meta
+      name="description"
+      content="H5 hos MAGS — Linux, IoT/embedded, message broker, tidsseriedata og dashboard i ét forløb."
+    />
+    <title>H5 · MAGS · Mercantec</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@500;700;800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <header class="top">
+      <a class="logo" href="/">
+        <span class="logo-mark">H5</span>
+        <span class="logo-text">MAGS · Mercantec</span>
+      </a>
+      <nav class="top-nav" aria-label="Hurtige links">
+        <a href="https://mercantec.notion.site/h5" target="_blank" rel="noopener">Notion</a>
+        <a href="https://h5-rabbit.mercantec.tech" target="_blank" rel="noopener">RabbitMQ</a>
+        <a href="https://github.com/Mercantech/H5" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://lup.dk/#/tidslinje/h5" target="_blank" rel="noopener">LUP</a>
+      </nav>
+    </header>
+
     <main>
-      <p class="org">MAGS · Mercantec</p>
-      <h1>H5</h1>
-      <p>
-        Template til Linux, embedded/IoT, message broker og dashboard. Stacken
-        kører bag <code>h5.mercantec.tech</code> — RabbitMQ er med som ekstra
-        service.
-      </p>
-      <ul>
-        <li>
-          <a href="https://mercantec.notion.site/h5" target="_blank" rel="noopener"
-            >Notion · H5</a
+      <section class="hero" aria-labelledby="brand">
+        <p class="eyebrow">Hovedforløb 5 · 9 uger</p>
+        <h1 class="brand" id="brand">H5</h1>
+        <p class="lede">
+          Fra Linux-miljø til live data — I bygger et projekt med IoT, message
+          broker, tidsserier og dashboard.
+        </p>
+        <div class="cta-row">
+          <a class="cta cta-primary" href="https://mercantec.notion.site/h5" target="_blank" rel="noopener"
+            >Åbn forløbet i Notion</a
           >
-        </li>
-        <li>
-          <a href="https://github.com/Mercantech/H5" target="_blank" rel="noopener"
-            >GitHub · H5</a
+          <a class="cta cta-ghost" href="https://h5-rabbit.mercantec.tech" target="_blank" rel="noopener"
+            >RabbitMQ UI</a
           >
-        </li>
-        <li>
-          <a href="https://h.mercantec.tech" target="_blank" rel="noopener"
-            >Alle hovedforløb</a
-          >
-        </li>
-      </ul>
+        </div>
+
+        <div class="pipeline" aria-hidden="true">
+          <span>Linux</span>
+          <span class="pipe">→</span>
+          <span>IoT</span>
+          <span class="pipe">→</span>
+          <span>Broker</span>
+          <span class="pipe">→</span>
+          <span>Data</span>
+          <span class="pipe">→</span>
+          <span>Dashboard</span>
+        </div>
+      </section>
+
+      <section class="strip" aria-labelledby="themes-title">
+        <h2 id="themes-title">Det forløbet drejer sig om</h2>
+        <p class="strip-lead">
+          Ikke et dagsprogram — bare de spor, I typisk møder på H5.
+        </p>
+        <ol class="themes">
+          <li>
+            <span class="theme-code">01</span>
+            <h3>Linux &amp; Docker</h3>
+            <p>VM, services og containere som hjem for projektet.</p>
+          </li>
+          <li>
+            <span class="theme-code">02</span>
+            <h3>Embedded / IoT</h3>
+            <p>Sensorer og enheder — ofte Arduino som anbefalet start.</p>
+          </li>
+          <li>
+            <span class="theme-code">03</span>
+            <h3>Message broker</h3>
+            <p>Kommunikation ud over HTTP — MQTT og RabbitMQ (AMQP).</p>
+          </li>
+          <li>
+            <span class="theme-code">04</span>
+            <h3>Data &amp; tidsserier</h3>
+            <p>Opsamling af større datamængder og hvordan I håndterer dem.</p>
+          </li>
+          <li>
+            <span class="theme-code">05</span>
+            <h3>Dashboard</h3>
+            <p>Visualisering og overblik over det, systemet samler ind.</p>
+          </li>
+          <li>
+            <span class="theme-code">06</span>
+            <h3>Drift &amp; kvalitet</h3>
+            <p>Hosting, oppetid, logning og tanken om CI/CD.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="frame" aria-labelledby="frame-title">
+        <h2 id="frame-title">Projektets ramme</h2>
+        <p class="frame-lead">
+          I vælger selv case og teknologier — inden for et par faste krav.
+        </p>
+        <ul class="frame-list">
+          <li>Dele af løsningen kører i et Linux-miljø</li>
+          <li>Der indgår en IoT-/embedded-enhed</li>
+          <li>Fokus på opsamling af større datamængder (gerne tidsserier)</li>
+          <li>Kommunikation fra enheden sker via andet end HTTP</li>
+          <li>Projektet hostes — lokalt datacenter eller cloud</li>
+          <li>Oppetid, pålidelighed og release tænkes ind</li>
+        </ul>
+        <p class="frame-note">
+          Detaljer, ugeplaner og materiale ligger i Notion — denne side er kun
+          teaseren.
+        </p>
+      </section>
     </main>
+
+    <footer class="foot">
+      <p>
+        <a href="https://h5.mercantec.tech">h5.mercantec.tech</a>
+        ·
+        <a href="https://h.mercantec.tech" target="_blank" rel="noopener">Alle hovedforløb</a>
+      </p>
+      <p>MAGS · Mercantec</p>
+    </footer>
   </body>
 </html>
