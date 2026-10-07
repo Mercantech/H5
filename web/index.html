@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Syne:wght@700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="stylesheet" href="styles.css?v=8" />
   </head>
   <body>
     <div class="atmosphere" aria-hidden="true"></div>
@@ -63,128 +63,115 @@
 
         <div class="hero-stage" aria-hidden="true">
           <div class="pipeline">
-            <svg class="hero-art" viewBox="0 0 640 460" role="img">
+            <svg class="hero-art" viewBox="0 0 680 420" role="img">
               <defs>
                 <linearGradient id="panelFill" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#16382d" />
-                  <stop offset="45%" stop-color="#0f241c" />
-                  <stop offset="100%" stop-color="#0a1712" />
+                  <stop offset="0%" stop-color="#184034" />
+                  <stop offset="40%" stop-color="#0f241c" />
+                  <stop offset="100%" stop-color="#081410" />
                 </linearGradient>
-                <linearGradient id="beamA" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#c6f56a" stop-opacity="0" />
-                  <stop offset="35%" stop-color="#c6f56a" stop-opacity="0.95" />
-                  <stop offset="100%" stop-color="#147a54" stop-opacity="0.15" />
-                </linearGradient>
-                <linearGradient id="beamB" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#7ecf9a" stop-opacity="0.2" />
+                <linearGradient id="beamMain" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#c6f56a" stop-opacity="0.15" />
                   <stop offset="50%" stop-color="#c6f56a" stop-opacity="1" />
-                  <stop offset="100%" stop-color="#7ecf9a" stop-opacity="0.15" />
+                  <stop offset="100%" stop-color="#7ecf9a" stop-opacity="0.2" />
                 </linearGradient>
                 <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#1a4a38" />
+                  <stop offset="0%" stop-color="#1d4f3b" />
                   <stop offset="100%" stop-color="#0d241c" />
                 </linearGradient>
                 <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#c6f56a" stop-opacity="0.55" />
-                  <stop offset="70%" stop-color="#147a54" stop-opacity="0.12" />
+                  <stop offset="0%" stop-color="#c6f56a" stop-opacity="0.5" />
+                  <stop offset="65%" stop-color="#147a54" stop-opacity="0.14" />
                   <stop offset="100%" stop-color="#147a54" stop-opacity="0" />
                 </radialGradient>
-                <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
-                  <feGaussianBlur stdDeviation="4" result="blur" />
+                <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3.5" result="blur" />
                   <feMerge>
                     <feMergeNode in="blur" />
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
-                <pattern id="gridDots" width="22" height="22" patternUnits="userSpaceOnUse">
-                  <circle cx="1.5" cy="1.5" r="1.1" fill="#c6f56a" opacity="0.12" />
+                <pattern id="gridDots" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <circle cx="1.2" cy="1.2" r="1" fill="#c6f56a" opacity="0.14" />
                 </pattern>
                 <clipPath id="panelClip">
-                  <rect x="28" y="36" width="584" height="360" rx="32" />
+                  <rect x="20" y="24" width="640" height="340" rx="30" />
                 </clipPath>
               </defs>
 
-              <!-- Stage -->
-              <rect x="28" y="36" width="584" height="360" rx="32" fill="url(#panelFill)" />
-              <rect x="28" y="36" width="584" height="360" rx="32" fill="url(#gridDots)" />
-              <rect x="28" y="36" width="584" height="360" rx="32" fill="none" stroke="#c6f56a" stroke-opacity="0.22" stroke-width="1.5" />
-              <path d="M60 36 H180" stroke="#c6f56a" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round" />
-              <text x="48" y="62" fill="#8fb9a6" font-size="11" font-family="IBM Plex Mono, monospace" letter-spacing="1.5">LIVE PIPELINE</text>
+              <rect x="20" y="24" width="640" height="340" rx="30" fill="url(#panelFill)" />
+              <rect x="20" y="24" width="640" height="340" rx="30" fill="url(#gridDots)" />
+              <rect x="20" y="24" width="640" height="340" rx="30" fill="none" stroke="#c6f56a" stroke-opacity="0.28" stroke-width="1.5" />
+              <path d="M48 24 H168" stroke="#c6f56a" stroke-opacity="0.7" stroke-width="2.5" stroke-linecap="round" />
+              <text x="40" y="52" fill="#9ecbb5" font-size="11" font-family="IBM Plex Mono, monospace" letter-spacing="2">LIVE PIPELINE</text>
 
               <g clip-path="url(#panelClip)">
-                <!-- Ambient sweeps -->
-                <ellipse class="ambient-orb" cx="120" cy="220" rx="90" ry="70" fill="url(#nodeGlow)" />
-                <ellipse class="ambient-orb ambient-orb-b" cx="520" cy="210" rx="100" ry="80" fill="url(#nodeGlow)" />
+                <ellipse class="ambient-orb" cx="110" cy="175" rx="85" ry="65" fill="url(#nodeGlow)" />
+                <ellipse class="ambient-orb ambient-orb-b" cx="560" cy="175" rx="95" ry="70" fill="url(#nodeGlow)" />
 
-                <!-- Paths -->
-                <path class="rail" d="M118 220 C170 220, 190 168, 250 168" fill="none" stroke="#2f6b52" stroke-width="2.5" stroke-linecap="round" />
-                <path class="rail" d="M310 168 C360 168, 380 248, 430 248" fill="none" stroke="#2f6b52" stroke-width="2.5" stroke-linecap="round" />
-                <path class="rail" d="M490 248 C530 248, 545 200, 545 168" fill="none" stroke="#2f6b52" stroke-width="2.5" stroke-linecap="round" />
+                <!-- Backbone -->
+                <path d="M118 175 H562" fill="none" stroke="#245844" stroke-width="10" stroke-linecap="round" opacity="0.35" />
+                <path class="signal-flow" d="M118 175 H562" fill="none" stroke="url(#beamMain)" stroke-width="3.5" stroke-linecap="round" />
 
-                <path class="signal-flow" d="M118 220 C170 220, 190 168, 250 168" fill="none" stroke="url(#beamA)" stroke-width="3.5" stroke-linecap="round" />
-                <path class="signal-flow signal-flow-2" d="M310 168 C360 168, 380 248, 430 248" fill="none" stroke="url(#beamB)" stroke-width="3.5" stroke-linecap="round" />
-                <path class="signal-flow signal-flow-3" d="M490 248 C530 248, 545 200, 545 168" fill="none" stroke="url(#beamA)" stroke-width="3.5" stroke-linecap="round" />
-
-                <!-- Packets -->
-                <circle class="packet packet-1" r="5" fill="#c6f56a" filter="url(#softGlow)">
-                  <animateMotion dur="2.8s" repeatCount="indefinite" path="M118 220 C170 220, 190 168, 250 168" />
+                <circle class="packet" r="5.5" fill="#c6f56a" filter="url(#softGlow)">
+                  <animateMotion dur="3.2s" repeatCount="indefinite" path="M118 175 H562" />
                 </circle>
-                <circle class="packet packet-2" r="4" fill="#7ecf9a" filter="url(#softGlow)">
-                  <animateMotion dur="2.8s" begin="0.9s" repeatCount="indefinite" path="M310 168 C360 168, 380 248, 430 248" />
+                <circle class="packet" r="4" fill="#7ecf9a" filter="url(#softGlow)">
+                  <animateMotion dur="3.2s" begin="1.05s" repeatCount="indefinite" path="M118 175 H562" />
                 </circle>
-                <circle class="packet packet-3" r="4.5" fill="#c6f56a" filter="url(#softGlow)">
-                  <animateMotion dur="2.8s" begin="1.7s" repeatCount="indefinite" path="M490 248 C530 248, 545 200, 545 168" />
+                <circle class="packet" r="4.5" fill="#c6f56a" filter="url(#softGlow)">
+                  <animateMotion dur="3.2s" begin="2.1s" repeatCount="indefinite" path="M118 175 H562" />
                 </circle>
 
                 <!-- 01 Sensor -->
-                <g class="node node-sensor" transform="translate(78 180)">
-                  <circle class="ring ring-a" cx="40" cy="40" r="46" fill="none" stroke="#c6f56a" stroke-opacity="0.35" />
-                  <circle class="ring ring-b" cx="40" cy="40" r="58" fill="none" stroke="#c6f56a" stroke-opacity="0.18" />
-                  <circle cx="40" cy="40" r="34" fill="#123328" stroke="#c6f56a" stroke-width="2" />
-                  <circle class="core-pulse" cx="40" cy="40" r="11" fill="#c6f56a" filter="url(#softGlow)" />
-                  <path d="M40 18 v8 M40 54 v8 M18 40 h8 M54 40 h8" stroke="#7ecf9a" stroke-width="2" stroke-linecap="round" />
+                <g transform="translate(70 135)">
+                  <circle class="ring ring-a" cx="48" cy="40" r="48" fill="none" stroke="#c6f56a" stroke-opacity="0.4" />
+                  <circle class="ring ring-b" cx="48" cy="40" r="62" fill="none" stroke="#c6f56a" stroke-opacity="0.18" />
+                  <circle cx="48" cy="40" r="36" fill="#123328" stroke="#c6f56a" stroke-width="2.2" />
+                  <circle class="core-pulse" cx="48" cy="40" r="12" fill="#c6f56a" filter="url(#softGlow)" />
+                  <path d="M48 16 v9 M48 55 v9 M16 40 h9 M71 40 h9" stroke="#7ecf9a" stroke-width="2.2" stroke-linecap="round" />
                 </g>
-                <text x="78" y="290" fill="#a8d0bc" font-size="12" font-family="IBM Plex Mono, monospace">01 · sensor</text>
+                <text x="82" y="250" fill="#b5d9c7" font-size="12" font-family="IBM Plex Mono, monospace">01 · sensor</text>
 
                 <!-- 02 Broker -->
-                <g class="node" transform="translate(250 128)">
-                  <rect x="0" y="0" width="60" height="80" rx="16" fill="#102820" stroke="#7ecf9a" stroke-width="2" />
-                  <circle class="led led-1" cx="18" cy="22" r="5" fill="#c6f56a" />
-                  <circle class="led led-2" cx="30" cy="22" r="5" fill="#7ecf9a" />
-                  <circle class="led led-3" cx="42" cy="22" r="5" fill="#4aa87a" />
-                  <rect x="14" y="40" width="32" height="7" rx="3.5" fill="#2f6b52" />
-                  <rect x="14" y="52" width="22" height="7" rx="3.5" fill="#245844" />
-                  <rect x="14" y="64" width="28" height="7" rx="3.5" fill="#1d4636" />
+                <g transform="translate(225 118)">
+                  <rect x="0" y="0" width="78" height="114" rx="18" fill="#102820" stroke="#7ecf9a" stroke-width="2.2" />
+                  <circle class="led led-1" cx="22" cy="28" r="6" fill="#c6f56a" />
+                  <circle class="led led-2" cx="39" cy="28" r="6" fill="#7ecf9a" />
+                  <circle class="led led-3" cx="56" cy="28" r="6" fill="#4aa87a" />
+                  <rect x="16" y="50" width="46" height="9" rx="4.5" fill="#2f6b52" />
+                  <rect x="16" y="66" width="32" height="9" rx="4.5" fill="#245844" />
+                  <rect x="16" y="82" width="40" height="9" rx="4.5" fill="#1d4636" />
                 </g>
-                <text x="248" y="228" fill="#a8d0bc" font-size="12" font-family="IBM Plex Mono, monospace">02 · broker</text>
+                <text x="236" y="270" fill="#b5d9c7" font-size="12" font-family="IBM Plex Mono, monospace">02 · broker</text>
 
                 <!-- 03 Data -->
-                <g class="node" transform="translate(430 208)">
-                  <rect x="0" y="0" width="60" height="80" rx="16" fill="#102820" stroke="#c6f56a" stroke-width="2" />
-                  <ellipse cx="30" cy="18" rx="18" ry="8" fill="none" stroke="#c6f56a" stroke-width="2" />
-                  <path d="M12 18 v36 c0 5 8 9 18 9 s18-4 18-9 V18" fill="none" stroke="#7ecf9a" stroke-width="2" />
-                  <ellipse cx="30" cy="36" rx="18" ry="8" fill="none" stroke="#4aa87a" stroke-width="1.5" opacity="0.7" />
-                  <ellipse cx="30" cy="54" rx="18" ry="8" fill="none" stroke="#4aa87a" stroke-width="1.5" opacity="0.45" />
+                <g transform="translate(370 118)">
+                  <rect x="0" y="0" width="78" height="114" rx="18" fill="#102820" stroke="#c6f56a" stroke-width="2.2" />
+                  <ellipse cx="39" cy="28" rx="22" ry="10" fill="none" stroke="#c6f56a" stroke-width="2.2" />
+                  <path d="M17 28 v48 c0 6 10 11 22 11 s22-5 22-11 V28" fill="none" stroke="#7ecf9a" stroke-width="2.2" />
+                  <ellipse cx="39" cy="52" rx="22" ry="10" fill="none" stroke="#4aa87a" stroke-width="1.6" opacity="0.75" />
+                  <ellipse cx="39" cy="74" rx="22" ry="10" fill="none" stroke="#4aa87a" stroke-width="1.6" opacity="0.45" />
                 </g>
-                <text x="430" y="312" fill="#a8d0bc" font-size="12" font-family="IBM Plex Mono, monospace">03 · data</text>
+                <text x="386" y="270" fill="#b5d9c7" font-size="12" font-family="IBM Plex Mono, monospace">03 · data</text>
 
                 <!-- 04 Dashboard -->
-                <g class="node" transform="translate(505 88)">
-                  <rect x="0" y="0" width="80" height="100" rx="14" fill="url(#screenGrad)" stroke="#c6f56a" stroke-width="2" />
-                  <rect x="10" y="12" width="60" height="8" rx="4" fill="#c6f56a" opacity="0.85" />
-                  <rect x="10" y="28" width="36" height="6" rx="3" fill="#7ecf9a" opacity="0.55" />
-                  <g class="chart" transform="translate(14 48)">
-                    <rect class="bar bar-1" x="0" y="28" width="10" height="20" rx="3" fill="#c6f56a" />
-                    <rect class="bar bar-2" x="16" y="18" width="10" height="30" rx="3" fill="#7ecf9a" />
-                    <rect class="bar bar-3" x="32" y="8" width="10" height="40" rx="3" fill="#c6f56a" />
-                    <rect class="bar bar-4" x="48" y="14" width="10" height="34" rx="3" fill="#4aa87a" />
+                <g transform="translate(510 105)">
+                  <rect x="0" y="0" width="96" height="140" rx="16" fill="url(#screenGrad)" stroke="#c6f56a" stroke-width="2.2" />
+                  <rect x="12" y="16" width="72" height="9" rx="4.5" fill="#c6f56a" opacity="0.9" />
+                  <rect x="12" y="34" width="44" height="7" rx="3.5" fill="#7ecf9a" opacity="0.55" />
+                  <g class="chart" transform="translate(16 58)">
+                    <rect class="bar bar-1" x="0" y="36" width="12" height="28" rx="3.5" fill="#c6f56a" />
+                    <rect class="bar bar-2" x="20" y="22" width="12" height="42" rx="3.5" fill="#7ecf9a" />
+                    <rect class="bar bar-3" x="40" y="10" width="12" height="54" rx="3.5" fill="#c6f56a" />
+                    <rect class="bar bar-4" x="60" y="18" width="12" height="46" rx="3.5" fill="#4aa87a" />
                   </g>
-                  <circle class="status-dot" cx="68" cy="16" r="3.5" fill="#c6f56a" />
+                  <circle class="status-dot" cx="80" cy="20" r="4" fill="#c6f56a" />
                 </g>
-                <text x="505" y="212" fill="#a8d0bc" font-size="12" font-family="IBM Plex Mono, monospace">04 · ui</text>
+                <text x="530" y="280" fill="#b5d9c7" font-size="12" font-family="IBM Plex Mono, monospace">04 · ui</text>
               </g>
 
-              <text x="48" y="372" fill="#6f9888" font-size="11" font-family="IBM Plex Mono, monospace">enhed → broker → lagring → dashboard</text>
+              <text x="40" y="340" fill="#6f9888" font-size="12" font-family="IBM Plex Mono, monospace">enhed → broker → lagring → dashboard</text>
             </svg>
           </div>
           <p class="hero-caption">Én fortælling: signalet bevæger sig gennem jeres system.</p>
