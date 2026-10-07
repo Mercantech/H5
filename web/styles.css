@@ -366,6 +366,18 @@ main {
   height: 1.7rem;
 }
 
+.chapter-icon-light {
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.chapter-icon img {
+  width: 1.65rem;
+  height: 1.65rem;
+  display: block;
+  object-fit: contain;
+}
+
 .chapter-step {
   margin: 0 0 0.3rem;
   font-family: var(--font-mono);
@@ -410,19 +422,22 @@ main {
 }
 
 .stack-badge {
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.85rem;
+  height: 2.85rem;
   display: grid;
   place-items: center;
-  border-radius: 10px;
-  background: rgba(20, 122, 84, 0.1);
-  color: var(--moss-deep);
-  margin-bottom: 0.25rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  margin-bottom: 0.35rem;
+  box-shadow: 0 6px 14px rgba(12, 28, 23, 0.06);
 }
 
-.stack-badge svg {
-  width: 1.55rem;
-  height: 1.55rem;
+.stack-badge img {
+  width: 1.65rem;
+  height: 1.65rem;
+  display: block;
+  object-fit: contain;
 }
 
 .stack-logos strong {
